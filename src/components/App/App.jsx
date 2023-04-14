@@ -1,10 +1,13 @@
-import { Profile } from "../profile/Profile";
-import { Container } from './App.styled'
-import user from '../data/user.json';
 import { GlobalStyle } from "./GlobalStyle";
+import { Container } from './App.styled'
 
+import { Profile } from "../profile/Profile";
+import user from '../data/user.json';
 
-export const App = () => {
+import { Statistics } from "components/statistics/Statistics";
+import { data } from '../data/data.json';
+
+export  const App = () => {
   return (
 
     <Container>
@@ -16,10 +19,19 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
+      <Statistics 
+        title="Upload stats"
+        stats={data.stats}
+      />
       
     </Container>
 
   );
 };
+
+  // <Statistics 
+  //       title="Upload stats"
+  //       stats={data}
+  //     />
 
 

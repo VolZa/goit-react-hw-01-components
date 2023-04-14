@@ -18,4 +18,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 //Component            Props
 //App                  {-}
 //Profile              {username: string, tag: string, location: string, avatar: string, stats.followers: number, stats.views: number, stats.likes: number}
+//Statistics            {id: string, label: string, percentage: number}
 
