@@ -1,6 +1,13 @@
 export const theme = {
   colors: {
-    gray: '#777777',
-    secondary: '#000000',
+    text: '#212121',
+    black: '#000',
+    white: '#fff',
+    gray: '#707070',
+    lightGray: '#f3f4f3',
+    accent: 'tomato',
+    green: 'green',
+    red: 'orangeRed',
+    lightBlue: 'lightblue',
   },
 }
