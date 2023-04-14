@@ -10,7 +10,4 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-code {
-    color: ${p => (p.whiteColor ? 'white' : 'black')};
-}
 `;

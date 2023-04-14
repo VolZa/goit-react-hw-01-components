@@ -1,25 +1,27 @@
-// import { Container } from './Profile.styled';
 import PropTypes from 'prop-types';
 import { Avatar } from './Avatar.styled';
 import { CardUser } from './CardUser.styled';
+import { Location } from './Location.styled';
+import { StatisticsValue } from './StatisticsValue.styled';
 import { Tag } from './Tag.styled';
 import { Title } from './Title.styled';
 import { User } from './User.styled';
+import { UserStatistics } from './UserStatistics.styled';
 
-export const Profile = ({ userName, tag, location, avatar, stats }) => {
+export const Profile = ({ username, tag, location, avatar, stats }) => {
     return (
         <User >   
             <CardUser>
-                <Avatar src={avatar} alt={userName} />
-                <Title>{userName}</Title>
+                <Avatar src={avatar} alt={username} />
+                <Title>{username}</Title>
                 <Tag>@{tag}</Tag>
-                <p>{location}</p>
+                <Location>{location}</Location>
             </CardUser>
-            <ul>
-                <li>Followers <span>{stats.followers}</span> </li>
-                <li>Views <span>{stats.views}</span></li>
-                <li>Likes <span>{stats.likes}</span></li>              
-            </ul>
+            <UserStatistics>
+                <li>Followers <StatisticsValue>{stats.followers}</StatisticsValue> </li>
+                <li>Views <StatisticsValue>{stats.views}</StatisticsValue></li>
+                <li>Likes <StatisticsValue>{stats.likes}</StatisticsValue></li>              
+            </UserStatistics>
         </User>    
 
     );
