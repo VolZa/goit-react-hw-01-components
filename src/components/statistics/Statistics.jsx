@@ -1,42 +1,30 @@
 import { SectionStatistics } from "./SectionStatistics.styled";
-
+import PropTypes from 'prop-types';
+import { Title } from "./Title.styled";
+import { List } from "./List.styled";
+import { Item } from "./Item.styled";
+import { Label } from "./Label.styled";
+import { Percentage } from "./Percentage.styled";
 
 export const Statistics = ({ title,  stats  }) => {
     return (
         <SectionStatistics>
-            <h2>{title}</h2>
-            <ul>
+            {{ title }.length > 0 && <Title>{title}</Title>}
+            <List>
                 {stats.map(stat => (
-                    <li key={stat.id}><span>{stat.label}</span><span>{ stat.percentage }</span></li>
+                    <Item key={stat.id}><Label>{stat.label}</Label><Percentage>{ stat.percentage }</Percentage></Item>
                 ))}
-            </ul>
+            </List>
             
         </SectionStatistics>
     );
 };
 
-
-
-// .statList {
-//   display: flex;
-//   width: 100%;
-//   margin: 0;
-//   padding: 0;
-//   list-style: none;
-// }
-
-// .item {
-//   text-align: center;
-//   padding: 30px;
-//   text-align: center;
-// }
-
-// .label {
-//   color: white;
-//   display: block;
-//   text-shadow: 1px 1px 2px rgb(106, 106, 106), -1px -1px 2px rgb(106, 106, 106);
-// }
-// .percentage {
-//   color: white;
-//   text-shadow: 1px 1px 2px rgb(106, 106, 106), -1px -1px 2px rgb(106, 106, 106);
-// }
+Statistics.propTypes = {
+    title: PropTypes.string,
+    stats: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        percentage: PropTypes.number.isRequired,
+    }).isRequired,
+};

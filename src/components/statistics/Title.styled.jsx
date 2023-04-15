@@ -6,4 +6,7 @@ export const Title = styled.h2`
     padding: 30px;
     margin: auto;
     text-transform: uppercase;
+    
+    background-color: ${p => p.theme.colors.white};
+    color: ${p => p.theme.colors.gray};
 `;
