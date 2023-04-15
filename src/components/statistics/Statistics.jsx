@@ -1,10 +1,10 @@
 import { SectionStatistics } from "./SectionStatistics.styled";
-import PropTypes from 'prop-types';
 import { Title } from "./Title.styled";
 import { List } from "./List.styled";
 import { Item } from "./Item.styled";
 import { Label } from "./Label.styled";
 import { Percentage } from "./Percentage.styled";
+import PropTypes from 'prop-types';
 
 export const Statistics = ({ title,  stats  }) => {
     return (
