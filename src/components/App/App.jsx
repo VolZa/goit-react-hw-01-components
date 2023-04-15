@@ -28,7 +28,7 @@ export  const App = () => {
       />
       <Statistics 
         title={data.title}
-        stats={data}
+        data={data}
       />
       <FriendList friends={friends} />
     
